@@ -1,4 +1,4 @@
-blog-silex
+An Example Blog made using Silex
 ==========
 
-A blog made in less than 3 hours using Silex and Twig
+A small blog made in less than 3 hours using Silex, Twig, Composer, Doctrine and Bootstrap
