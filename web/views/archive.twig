@@ -1,0 +1,17 @@
+{% extends "template/base.twig" %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+	<div class="page-header">
+		<h1>Archive {{ month_name }} {{ year }}</h1>
+	</div>
+	
+	<div>
+    {% for post in posts %}
+        <h3>{{ post.title|e }}</h3>
+        <div class="post-date small">{{ post.created|e }}</div>
+        <div class="post-content">{{ post.content|e }}</div>
+    {% endfor %}
+    </div>
+	
+{% endblock %}

@@ -1,0 +1,94 @@
+{% spaceless %}<!DOCTYPE html>
+<html lang="en">
+<!-- Hi there, V0.1 © 2014 Diego Potapczuk  -->
+    <head>
+        {% block head %}
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+            <meta name="language" content="en" />
+            <meta name="generator" content="potapczuk" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta charset="utf-8">
+            
+            <meta name="description" content="Diego Potapczuk, a Brazilian Software Developer Blog using Silex and Twig" />
+            <meta name="keywords" content="Diego Potapczuk, PHP, Java, C#, Zend Framework, Doctrine, Bootstrap, jQuery, Silex, Twig" />
+            <meta name="author" content="Diego Potapczuk" />
+            <meta name="robots" content="noindex">
+            
+            <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+            <link rel="icon" type="image/x-icon" href="/favicon.ico">
+            	
+            <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+            <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+            <link href="/css/style.css" rel="stylesheet" type="text/css" />	
+            
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        
+            <title>{% block title %}{% endblock %} - Diego Potapczuk</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="header" class="navbar navbar-inverse navbar-fixed-top"
+    		role="navigation">
+    		<div class="container">
+    			<div class="navbar-header">
+    				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    					<span class="sr-only">Toggle navigation</span>
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    				</button>
+    				<a class="navbar-brand" href="/">Diego Potapczuk</a>
+    			</div>
+    			<div class="collapse navbar-collapse">
+    				<ul class="nav navbar-nav navbar-right">
+    					<li><a href="/">Home</a></li>
+    				</ul>
+    			</div>
+    			<!--/.nav-collapse -->
+    		</div>
+    	</div>
+
+        <div id="content" class="container">
+            <div class="col-md-8">{% block content %}{% endblock %}</div>
+            
+            <div class="col-md-4" id="sidebar">
+                <h2>Sidebar</h2>
+                <h3>Recent Posts</h3>
+                <div class="recents block">
+                    {% for post in sidebar_recent %}
+                        <a href="/post/{{ post.id }}">{{ post.title|e }}</a><br/>
+                    {% endfor %}
+                </div>
+                <h3>Archive</h3>
+                <div class="archive block">
+                    {% for year, year_v in sidebar_archive %}
+                        {% for month, month_v in year_v %}
+                            <a href="/archive/{{ year }}/{{ month }}">{{ month_v.name }} {{ year }} ({{ month_v.c }})</a><br/>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+    		<div class="container">
+    		{% block footer %}
+                <div class="copyright">
+                  © 2014 <a href="http://www.potapczuk.com/" target="_blank">Diego Potapczuk</a>
+                </div>
+                <div class="links">
+        			<a href="mailto:potapczuk@gmail.com">Email</a> &nbsp; - &nbsp;
+        			<a href="http://linkedin.com/in/potapczuk" target="_blank">LinkedIn
+        			Profile</a> &nbsp; - &nbsp;
+        			<a href="http://www.potapczuk.com" target="_blank">Personal Site</a>
+    			</div>
+			{% endblock %}
+    		</div>
+    	</div>
+    </body>
+</html>{% endspaceless %}

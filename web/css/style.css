@@ -1,0 +1,161 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-family: 'Roboto', "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 60px;
+  background-color: #f5f5f5;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+body.portfolio > .container {
+  padding: 100px 15px 0;
+}
+
+a {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+}
+
+a:hover {
+	color: #153E63;
+	border-bottom: 2px solid #153E63;
+	text-decoration: none;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.showcase-caption {
+	font-size: 14px;
+	margin: 0;
+	padding: 6px 10px;
+	color: #fff;
+	background: #7791A0;
+}
+
+/* -- */
+
+p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+#header{
+	background-color: #11202B;
+	font-size: 18px;
+}
+
+.navbar-inverse .navbar-toggle {
+	background-color: #2C404E;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background-color: #213442;
+}
+
+.nav>li {
+	height: 58px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #BCC8CF;
+	padding-top: 20px;
+	
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+}
+
+.navbar-inverse .navbar-brand:hover { 
+	border: none;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+	background: none;
+	border-bottom: 2px solid #fff;
+	padding: 20px 0 10px;
+	margin: 0 20px;  
+}
+
+.navbar-inverse .navbar-nav>li.active{
+	background-color: #213442;
+	padding-bottom: 8px;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: #A5A5A5;
+	padding: 20px 0 10px;
+	margin: 0 20px;
+	
+	border-bottom: 0 solid #A5A5A5;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #CAD8E0;
+	border-bottom: 2px solid #CAD8E0;
+}
+
+.panel-default>.panel-heading {
+	padding: 0;
+}
+
+.panel-title>a {
+	display: block;
+	width: 100%;
+	padding: 15px 15px;
+	font-size: 17px;
+	font-weight: bold;
+	background-color: #D9E4EB;
+}
+
+.panel-title>a:hover {
+	text-decoration: none;
+	background-color: #D1E0E9;
+}
+
+#content ul {
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+
+.footer > .container {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 120%;
+}
+
+.footer .copyright {
+	float: left;
+	margin-bottom: 15px;
+}
+.footer .links {
+	float: right;
+	margin-bottom: 15px;
+}
+
+div.block {
+	background-color: #E8EFF5;
+	padding: 5px;
+}
