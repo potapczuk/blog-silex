@@ -1,6 +1,8 @@
 <?php 
-require_once realpath(__DIR__.'/../vendor/autoload.php');
-require_once realpath(__DIR__.'/base.php');
+define('DS', DIRECTORY_SEPARATOR);
+
+require_once realpath(__DIR__.DS.'..'.DS.'vendor'.DS.'autoload.php');
+require_once realpath(__DIR__.DS.'base.php');
 
 $app = new Silex\Application();
 
